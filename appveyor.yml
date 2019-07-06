@@ -11,6 +11,7 @@ configuration:
 
 before_build:
   - cmd: |-
+      dir
       mkdir build
 
 build:
@@ -29,7 +30,6 @@ artifacts:
     type: zip
 
 # https://www.appveyor.com/docs/deployment/github/#promoting-selected-tag-to-github-release
-skip_tags: true
 deploy:
   provider: GitHub
   auth_token:
