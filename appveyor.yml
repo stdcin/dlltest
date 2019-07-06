@@ -23,7 +23,7 @@ build:
 
 after_build:
   - dir C:\OpenSSL-Win32\bin\
-  - xcopy C:\OpenSSL-Win32\bin\libcrypto-1_1.dll %Configuration%\ /y
+  # - xcopy C:\OpenSSL-Win32\bin\libcrypto-1_1.dll %Configuration%\ /y
   - 7z a dlltest-windows-x86-%Configuration%.zip %Configuration%\
 
 artifacts:
