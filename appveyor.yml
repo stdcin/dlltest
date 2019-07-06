@@ -28,9 +28,9 @@ artifacts:
     name: dlltest
     type: zip
 
-
+# https://www.appveyor.com/docs/deployment/github/#promoting-selected-tag-to-github-release
 deploy:
-  tag: v$(appveyor_build_version)
+  tag: $(APPVEYOR_REPO_TAG_NAME)
   # release: dlltest-v$(appveyor_build_version)
   # description: 'Release description'
   provider: GitHub
