@@ -11,7 +11,7 @@ configuration:
 
 before_build:
   - cmd: |-
-      dir
+      dir c:\
       mkdir build
 
 build:
