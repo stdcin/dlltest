@@ -21,10 +21,10 @@ build:
 #  - build
 
 after_build:
-  - 7z a dlltest-%Configuration%.zip %Configuration%\
+  - 7z a dlltest-windows-x86-%Configuration%.zip %Configuration%\
 
 artifacts:
-  - path: dlltest-%Configuration%.zip
+  - path: dlltest-windows-x86-%Configuration%.zip
     name: dlltest
     type: zip
 
