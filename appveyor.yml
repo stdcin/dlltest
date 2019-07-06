@@ -1,0 +1,31 @@
+version: '1.0.{build}'
+
+image: Visual Studio 2017
+
+configuration:
+  - Release
+  - Debug
+
+before_build:
+  - cmd: |-
+      mkdir build
+      # cd build
+      # cmake --version
+      # cmake .. -G "Visual Studio 15 2017"
+
+build:
+  project: dlltest.sln
+  verbosity: minimal
+
+#cache:
+#  - build
+
+after_build:
+  - 7z a dlltest-%Configuration%.zip %Configuration%
+
+artifacts:
+  - path: dlltest-%Configuration%.zip
+    name: dlltest
+    type: zip
+
+
