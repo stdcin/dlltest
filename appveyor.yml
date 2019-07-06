@@ -30,7 +30,7 @@ artifacts:
 
 # https://www.appveyor.com/docs/deployment/github/#promoting-selected-tag-to-github-release
 deploy:
-  tag: $(APPVEYOR_REPO_TAG_NAME)
+  # tag: $(APPVEYOR_REPO_TAG_NAME)
   # release: dlltest-v$(appveyor_build_version)
   # description: 'Release description'
   provider: GitHub
