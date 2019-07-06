@@ -2,6 +2,9 @@ version: '1.0.{build}'
 
 image: Visual Studio 2017
 
+platform:
+  - x86
+
 configuration:
   - Release
   - Debug
@@ -18,7 +21,7 @@ build:
 #  - build
 
 after_build:
-  - 7z a dlltest-%Configuration%.zip %Configuration%
+  - 7z a dlltest-%Configuration%.zip %Configuration%\
 
 artifacts:
   - path: dlltest-%Configuration%.zip
